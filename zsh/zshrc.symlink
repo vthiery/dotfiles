@@ -35,6 +35,7 @@ setopt AUTO_PUSHD
 # For a full list of active aliases, run `alias`.
 #
 alias lla="ls -la"
+alias vim="nvim"
 
 # Setup pure theme
 autoload -U promptinit; promptinit

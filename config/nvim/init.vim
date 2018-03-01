@@ -38,8 +38,16 @@ autocmd BufWritePre * %s/\s\+$//e                   " rm trailing whitespaces on
 " Color scheme
 colorscheme elflord
 
+" Install vim-plug automatically
+" see https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 " Install plugins
-call plug#begin()
+call plug#begin('~/.local/share/nvim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'Valloric/YouCompleteMe'
 call plug#end()

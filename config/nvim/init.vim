@@ -48,6 +48,7 @@ endif
 
 " Install plugins
 call plug#begin('~/.local/share/nvim/plugged')
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'scrooloose/nerdtree'
 Plug 'Valloric/YouCompleteMe'
 call plug#end()

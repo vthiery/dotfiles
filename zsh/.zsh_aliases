@@ -1,0 +1,4 @@
+# Put here all my aliases
+
+alias vim="nvim"
+alias lla="ls -la"

@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+export ZSH=/home/vthiery/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -26,13 +26,11 @@ setopt AUTO_PUSHD
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-alias lla="ls -la"
-alias vim="nvim"
+# Put all my aliases in a dedicated file
+source .zsh_aliases
+
+# Go path
+source .zsh_gopath
 
 # Setup pure theme
 fpath+=('/usr/lib/node_modules/pure-prompt/functions')

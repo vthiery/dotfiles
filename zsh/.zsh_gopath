@@ -1,0 +1,4 @@
+# Set my gopath
+export GOPATH=$HOME/go
+export PATH=$HOME/.local/bin/:$GOPATH/bin:/usr/local/go/bin:$PATH
+

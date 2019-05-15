@@ -29,8 +29,8 @@ setopt AUTO_PUSHD
 # Put all my aliases in a dedicated file
 source .zsh_aliases
 
-# Go path
-source .zsh_gopath
+# Go dev setup
+source .zsh_go
 
 # Setup pure theme
 fpath+=('/usr/lib/node_modules/pure-prompt/functions')

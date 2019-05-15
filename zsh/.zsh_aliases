@@ -3,3 +3,4 @@
 alias vim="nvim"
 alias lla="ls -la"
 alias dockrun="docker run --rm -ti"
+alias dockc="docker-compose"

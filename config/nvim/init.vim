@@ -12,28 +12,28 @@ set shell=zsh			                            " enforce use zsh shell
 
 " Setup my workspace
 set showmode			                            " show the active mode
-set number			                                " always show the lines
-set nowrap			                                " do not wrap the lines
-set autochdir                                       " work in current directory
+set number			                              " always show the lines
+set nowrap			                              " do not wrap the lines
+set autochdir                                 " work in current directory
 
 " Conventions
 set tabstop=4			                            " four tabs is my convention
-set shiftwidth=4		                            " autoidenting is four spaces
+set shiftwidth=4		                          " autoidenting is four spaces
 set expandtab			                            " convert tabs to spaces
 
 " Search utils
-set ignorecase			                            " ignore case ...
+set ignorecase			                          " ignore case ...
 set smartcase			                            " ... only if fully lowercase
 set hlsearch			                            " highlight search results
-set showmatch                                       " live match highlighting
-set incsearch                                       " incremental search
+set showmatch                                 " live match highlighting
+set incsearch                                 " incremental search
 
 " Behavior
 set autoread			                            " auto reload if modified outside Vim
 set nobackup			                            " disable backup
-set nowritebackup                                   " same spirit
-set noswapfile                                      " disable use of swp files
-autocmd BufWritePre * %s/\s\+$//e                   " rm trailing whitespaces on save
+set nowritebackup                             " same spirit
+set noswapfile                                " disable use of swp files
+autocmd BufWritePre * %s/\s\+$//e             " rm trailing whitespaces on save
 
 " Color scheme
 colorscheme elflord

@@ -26,8 +26,13 @@ setopt AUTO_PUSHD
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+source .zsh_main
+
 # Put all my aliases in a dedicated file
 source .zsh_aliases
+
+# AWS dev setup
+source .zsh_aws
 
 # Go dev setup
 source .zsh_go
@@ -37,3 +42,9 @@ fpath+=('/usr/lib/node_modules/pure-prompt/functions')
 autoload -U promptinit; promptinit
 prompt pure
 
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /home/vthiery/.local/bin/terraform terraform
+
+# asdf setup
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash

@@ -8,32 +8,31 @@
 
 set nocompatible
 
-set shell=zsh			                            " enforce use zsh shell
+set shell=zsh
 
 " Setup my workspace
-set showmode			                            " show the active mode
-set number			                              " always show the lines
-set nowrap			                              " do not wrap the lines
-set autochdir                                 " work in current directory
+set showmode
+set number
+set autochdir
 
 " Conventions
-set tabstop=4			                            " four tabs is my convention
-set shiftwidth=4		                          " autoidenting is four spaces
-set expandtab			                            " convert tabs to spaces
+set tabstop=4
+set shiftwidth=2
+set expandtab
 
 " Search utils
-set ignorecase			                          " ignore case ...
-set smartcase			                            " ... only if fully lowercase
-set hlsearch			                            " highlight search results
-set showmatch                                 " live match highlighting
-set incsearch                                 " incremental search
+set ignorecase
+set smartcase
+set hlsearch
+set showmatch
+set incsearch
 
 " Behavior
-set autoread			                            " auto reload if modified outside Vim
-set nobackup			                            " disable backup
-set nowritebackup                             " same spirit
-set noswapfile                                " disable use of swp files
-autocmd BufWritePre * %s/\s\+$//e             " rm trailing whitespaces on save
+set autoread
+set nobackup
+set nowritebackup
+set noswapfile
+autocmd BufWritePre * %s/\s\+$//e
 
 " Color scheme
 colorscheme elflord
@@ -51,9 +50,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'scrooloose/nerdtree'
 Plug 'Valloric/YouCompleteMe'
+Plug 'hashivim/vim-terraform'
 call plug#end()
 
-" Commands
 " Toggle NERDTree with C-b
 nnoremap <C-b> :NERDTreeToggle<CR>
 
@@ -61,8 +60,3 @@ nnoremap <C-b> :NERDTreeToggle<CR>
 let g:NERDTreeMouseMode=2
 let g:NERDTreeQuitOnOpen=0
 let g:NERDTreeIgnore=[ '\.obj$', '\.o$', '\.git$', '\.vscode$' ]
-
-" Conque-GDB settings
-let g:ConqueTerm_Color=1
-let g:ConqueTerm_CloseOnEnd=1
-let g:ConqueTerm_StartMessages=0

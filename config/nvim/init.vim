@@ -51,12 +51,21 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'scrooloose/nerdtree'
 Plug 'Valloric/YouCompleteMe'
 Plug 'hashivim/vim-terraform'
+Plug 'vim-airline/vim-airline'
+Plug 'preservim/nerdcommenter'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
-" Toggle NERDTree with C-b
-nnoremap <C-b> :NERDTreeToggle<CR>
+" Toggle NERDTree with C-t
+nnoremap <C-t> :NERDTreeToggle<CR>
 
 " NERDTree settings
 let g:NERDTreeMouseMode=2
 let g:NERDTreeQuitOnOpen=0
-let g:NERDTreeIgnore=[ '\.obj$', '\.o$', '\.git$', '\.vscode$' ]
+let g:NERDTreeIgnore=[ '\.obj$', '\.o$', '\.git$' ]
+
+" NERDCommenter
+filetype plugin on

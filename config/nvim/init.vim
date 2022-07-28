@@ -69,3 +69,7 @@ let g:NERDTreeIgnore=[ '\.obj$', '\.o$', '\.git$' ]
 
 " NERDCommenter
 filetype plugin on
+
+" Terraform
+let g:terraform_fmt_on_save=1
+let g:terraform_align=1

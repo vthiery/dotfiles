@@ -47,11 +47,9 @@ endif
 
 " Install plugins
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'dense-analysis/ale'
 Plug 'scrooloose/nerdtree'
 Plug 'Valloric/YouCompleteMe'
-Plug 'hashivim/vim-terraform'
-Plug 'fatih/vim-hclfmt'
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdcommenter'
 Plug 'airblade/vim-gitgutter'
@@ -59,6 +57,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'rhysd/vim-notes-cli'
+Plug 'hashivim/vim-terraform'
 call plug#end()
 
 " Toggle NERDTree with C-t
@@ -72,6 +71,16 @@ let g:NERDTreeIgnore=[ '\.obj$', '\.o$', '\.git$' ]
 " NERDCommenter
 filetype plugin on
 
-" Terraform
-let g:terraform_fmt_on_save=1
-let g:terraform_align=1
+" ALE config
+let g:ale_fix_on_save=1
+let g:ale_lint_on_save=1
+let g:ale_linters={
+\  'go': ['gopls', 'golangci-lint'],
+\  'terraform': ['terraform', 'terraform_ls', 'terraform_lsp', 'tflint', 'tfsec'],
+\  'Dockerfile': ['hadolint'],
+\}
+let g:ale_fixers={
+\  '*': ['remove_trailing_lines', 'trim_whitespace'],
+\  'go': ['gofmt', 'gofumpt'],
+\  'terraform': ['terraform'],
+\}

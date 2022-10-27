@@ -22,13 +22,22 @@ export EDITOR='nvim'
 export GIT_EDITOR='nvim'
 setopt NO_BEEP
 setopt AUTO_PUSHD
-
 export GPG_TTY=$(tty)
 
-source .zsh_aliases
-source .zsh_aws
-source .zsh_go
+# Aliases
+alias vi="nvim"
+alias vim="nvim"
+alias lla="ls -la"
+alias dockrun="docker run --rm -ti"
+alias dc="docker-compose"
+alias tf="terraform"
 
+# Environment variables
+export AWS_SDK_LOAD_CONFIG=1
+export GOPATH=$HOME/dev
+export PATH=$GOPATH/bin:/usr/local/go/bin:$PATH
+
+# Completion
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /home/vthiery/.local/bin/terraform terraform
 

@@ -1,8 +1,0 @@
-# Put here all my aliases
-
-alias vi="nvim"
-alias vim="nvim"
-alias lla="ls -la"
-alias dockrun="docker run --rm -ti"
-alias dc="docker-compose"
-alias tf="terraform"

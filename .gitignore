@@ -1,0 +1,10 @@
+tmp
+*.bak
+*.swp
+
+*.pyc
+venv
+
+.docker/
+
+.tool-versions

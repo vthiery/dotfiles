@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/vthiery/.oh-my-zsh
+export ZSH=/home/$USER/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -11,6 +11,7 @@ ZSH_THEME="nicoulaj"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  ag
   git
   docker
 )
@@ -39,7 +40,7 @@ export PATH=$GOPATH/bin:/usr/local/go/bin:$PATH
 
 # Completion
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /home/vthiery/.local/bin/terraform terraform
+complete -o nospace -C /home/v/.asdf/shims/terraform terraform
 
 # asdf setup
 . $HOME/.asdf/asdf.sh

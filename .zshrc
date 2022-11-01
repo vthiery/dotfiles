@@ -5,6 +5,12 @@ export ZSH=/home/$USER/.oh-my-zsh
 ZSH_THEME="nicoulaj"
 
 # oh-my-zsh plugins
+
+## Tmux
+export ZSH_TMUX_CONFIG=$HOME/.config/tmux/config
+export ZSH_TMUX_AUTOSTART=true
+export ZSH_TMUX_UNICODE=true
+
 plugins=(
   ag
   asdf
@@ -28,10 +34,12 @@ setopt AUTO_PUSHD
 # Environment variables
 export EDITOR='nvim'
 export GIT_EDITOR='nvim'
-export GPG_TTY=$(tty)
-export AWS_SDK_LOAD_CONFIG=1
+
 export GOPATH=$HOME/dev
 export PATH=$GOPATH/bin:/usr/local/go/bin:$PATH
+
+export GPG_TTY=$(tty)
+export AWS_SDK_LOAD_CONFIG=1
 
 # Aliases
 alias vi="nvim"

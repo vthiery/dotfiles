@@ -40,7 +40,6 @@ setopt AUTO_PUSHD
 
 # Environment variables
 export EDITOR='nvim'
-export GIT_EDITOR='nvim'
 
 export GOPATH=$HOME/dev
 export PATH=$GOPATH/bin:/usr/local/go/bin:$PATH

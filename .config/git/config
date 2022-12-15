@@ -1,5 +1,5 @@
 [core]
-  editor = vim
+  editor = nvim
 
 [user]
   name = vthiery
@@ -8,5 +8,8 @@
 [url "git@github.com:"]
   insteadOf = "https://github.com/"
 
+[pull]
+  rebase = true
+
 [push]
-  autoSetupRemote = true
+	autoSetupRemote = true

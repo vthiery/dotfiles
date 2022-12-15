@@ -49,7 +49,6 @@ endif
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'dense-analysis/ale'
 Plug 'scrooloose/nerdtree'
-Plug 'Valloric/YouCompleteMe'
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdcommenter'
 Plug 'airblade/vim-gitgutter'

@@ -14,7 +14,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # oh-my-zsh plugins
 
 ## Tmux
-export ZSH_TMUX_CONFIG=$HOME/.config/tmux/config
+export ZSH_TMUX_CONFIG=$HOME/.config/tmux/tmux.conf
 export ZSH_TMUX_AUTOSTART=true
 export ZSH_TMUX_UNICODE=true
 
@@ -50,7 +50,7 @@ export AWS_SDK_LOAD_CONFIG=1
 # Aliases
 alias vi="nvim"
 alias vim="nvim"
-alias lla="ls -la"
+alias l="ls -la"
 
 autoload -U +X bashcompinit && bashcompinit
 

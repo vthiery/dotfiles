@@ -1,11 +1,6 @@
 # Path to oh-my-zsh installation.
 export ZSH=/home/$USER/.oh-my-zsh
 
-# oh-my-zsh plugins
-export ZSH_TMUX_CONFIG=$HOME/.config/tmux/tmux.conf
-export ZSH_TMUX_AUTOSTART=true
-export ZSH_TMUX_UNICODE=true
-
 plugins=(
   ag
   asdf
@@ -16,7 +11,6 @@ plugins=(
   golang
   nomad
   terraform
-  tmux
   vault
   zsh-autosuggestions
 )
@@ -41,6 +35,9 @@ alias vi="nvim"
 alias vim="nvim"
 alias ll="ls -l"
 alias l="ls -la"
+alias bat="batcat"
+alias d="kitty +kitten diff"
+alias gd="g difftool --no-symlinks --dir-diff"
 
 autoload -U +X bashcompinit && bashcompinit
 

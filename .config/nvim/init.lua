@@ -349,7 +349,7 @@ local on_attach = function(_, bufnr)
   end, { desc = 'Format current buffer with LSP' })
 
   -- Format buffer on save
-  vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
+  vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
 end
 
 -- Enable the following language servers

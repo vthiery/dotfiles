@@ -23,6 +23,7 @@ setopt AUTO_PUSHD
 
 # Environment variables
 export EDITOR='nvim'
+export STARSHIP_CONFIG=$HOME/.config/starship/config.toml
 
 export GOPATH=$HOME/dev
 export PATH=$GOPATH/bin:/usr/local/go/bin:$PATH

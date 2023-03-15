@@ -26,7 +26,7 @@ export EDITOR='nvim'
 export STARSHIP_CONFIG=$HOME/.config/starship/config.toml
 
 export GOPATH=$HOME/dev
-export PATH=$GOPATH/bin:/usr/local/go/bin:$PATH
+export PATH=$GOPATH/bin:/usr/local/go/bin:$HOME/.cargo/bin:$PATH
 
 export GPG_TTY=$(tty)
 export AWS_SDK_LOAD_CONFIG=1

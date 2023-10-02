@@ -18,12 +18,14 @@ require('packer').startup(function(use)
       'williamboman/mason.nvim',
       'williamboman/mason-lspconfig.nvim',
 
-      -- Useful status updates for LSP
-      'j-hui/fidget.nvim',
-
       -- Additional lua configuration, makes nvim stuff amazing
       'folke/neodev.nvim',
     },
+  }
+
+  use { -- Useful status updates for LSP
+    'j-hui/fidget.nvim',
+    tag = 'legacy',
   }
 
   use { -- Autocompletion
@@ -169,10 +171,7 @@ require('Comment').setup()
 
 -- Enable `lukas-reineke/indent-blankline.nvim`
 -- See `:help indent_blankline.txt`
-require('indent_blankline').setup {
-  char = '┊',
-  show_trailing_blankline_indent = false,
-}
+require('ibl').setup()
 
 -- Gitsigns
 -- See `:help gitsigns.txt`
@@ -235,8 +234,8 @@ require('nvim-treesitter.configs').setup {
     'nix',
     'python',
     'rust',
-    'help',
     'vim',
+    'vimdoc',
   },
 
   highlight = { enable = true },
@@ -362,12 +361,6 @@ local servers = {
       shadow = true,
       unusedparams = true,
       unusedvariable = true,
-    },
-  },
-  sumneko_lua = {
-    Lua = {
-      workspace = { checkThirdParty = false },
-      telemetry = { enable = false },
     },
   },
 }

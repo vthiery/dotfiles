@@ -5,7 +5,7 @@ Managed with [chezmoi](https://chezmoi.io).
 ## Bootstrap a new machine
 
 ```sh
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply --branch main vthiery
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply vthiery
 ```
 
 This will:

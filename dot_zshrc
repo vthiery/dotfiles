@@ -1,0 +1,32 @@
+# Path to oh-my-zsh installation.
+export ZSH=/home/$USER/.oh-my-zsh
+
+plugins=(
+  aws
+  gh
+  git
+  golang
+  terraform
+  zsh-autosuggestions
+)
+
+source $ZSH/oh-my-zsh.sh
+
+setopt NO_BEEP
+setopt AUTO_PUSHD
+
+export EDITOR='nvim'
+
+export GOPATH=$HOME/dev
+export PATH=$GOPATH/bin:/usr/local/go/bin:$HOME/.cargo/bin:$HOME/.local/bin:$PATH
+
+export GPG_TTY=$(tty)
+export AWS_SDK_LOAD_CONFIG=1
+
+source ~/.zsh_aliases
+
+autoload -U +X bashcompinit && bashcompinit
+
+export STARSHIP_CONFIG=$HOME/.config/starship/config.toml
+eval "$(mise activate zsh)"
+eval "$(starship init zsh)"

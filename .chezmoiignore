@@ -1,0 +1,3 @@
+# chezmoi will ignore these patterns
+.DS_Store
+*.swp

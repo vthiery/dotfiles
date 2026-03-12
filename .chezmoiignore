@@ -1,3 +1,5 @@
 # chezmoi will ignore these patterns
 .DS_Store
 *.swp
+# don't capture nested git repos
+dot_config/nvim/dot_git

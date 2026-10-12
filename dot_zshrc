@@ -30,3 +30,6 @@ autoload -U +X bashcompinit && bashcompinit
 export STARSHIP_CONFIG=$HOME/.config/starship/config.toml
 eval "$(mise activate zsh)"
 eval "$(starship init zsh)"
+
+# opencode
+export PATH=/home/toshiro/.opencode/bin:$PATH

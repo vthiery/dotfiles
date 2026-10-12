@@ -3,3 +3,4 @@
 *.swp
 # don't capture nested git repos
 dot_config/nvim/dot_git
+README.md
